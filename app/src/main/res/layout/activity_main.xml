@@ -5,43 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:id="@+id/container"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center"
-        android:background="@drawable/img"
-        android:padding="32sp"
-        android:textColor="@color/white"
-        android:textSize="30sp" />
-
-    <EditText
-        android:id="@+id/first_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="@color/white"
-        android:hint="@string/first_name"
-        android:textColorHint="@color/white" />
-
-    <EditText
-        android:id="@+id/second_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        android:backgroundTint="@color/white"
-        android:hint="@string/second_name"
-        android:textColorHint="@color/white" />
-
-    <Button
-        android:id="@+id/btn_calculate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="64dp"
-        android:text="@string/calculate" />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_graph" />
 
 </LinearLayout>
