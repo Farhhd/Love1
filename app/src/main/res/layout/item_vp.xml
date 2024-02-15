@@ -15,12 +15,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/img_board"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:src="@mipmap/ic_launcher"
         android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
